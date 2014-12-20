@@ -1,0 +1,37 @@
+body {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+.site-header {
+    margin: 32px 0 0 0;
+    border: 1px solid lightgrey;
+}
+.site-title {
+    font-size: 300%;
+    margin-bottom: 0;
+}
+.site-description {
+    font-size: 90%;
+    color: grey;
+    margin-top: 0;
+}
+
+.primary {
+    float: left;
+    width: 800px;
+    border: solid 1px darkgray;
+}
+
+.main-sidebar {
+    float: left;
+}
+.widget {
+    border: solid darkgray 1px;
+    margin: 0 0 15px;
+}
+
+footer {
+    clear: both;
+    border: 1px solid darkgray;
+}
