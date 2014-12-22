@@ -20,26 +20,55 @@ module.exports = function (grunt) {
       }
     },
 
-    watch: {
-      options: {
-        livereload: true
-      },
-      php: {
-        files: ['**/*.php', '**/*.css', '**/*.html'],
-        taskes: []
-      }
-    },
-
     concurrent: {
       start: [
+        'less',
         'open',
         'watch'
       ],
       options: {
         logConcurrentOutput: true
       }
+    },
+
+    less: {
+      default: {
+        files: {
+          'style.css': 'styles/main.less'
+        }
+      }
+    },
+
+    watch: {
+      options: {
+        livereload: true
+      },
+      php: {
+        files: ['**/*.php'],
+        tasks: []
+      },
+      less: {
+        files: ['styles/**/*.less'],
+        tasks: ['less']
+      }
+    },
+
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          src: ['*', '!Gruntfile.js', '!bower.json', '!package.json'],
+          dest: 'dist/',
+          filter: 'isFile'
+        }]
+      }
+    },
+
+    clean: {
+      dist: ['dist']
     }
   });
 
+  grunt.registerTask('build', ['less', 'clean', 'copy']);
   grunt.registerTask('default', ['php', 'concurrent']);
 };

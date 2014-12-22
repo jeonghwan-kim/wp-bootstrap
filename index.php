@@ -7,7 +7,7 @@
       <div class="post" id="post-<?php the_ID(); ?>">
 
         <!-- 제목 출력 -->
-        <h2><a href="<?php the_permalink(); ?>"
+        <h2 class="page-header"><a href="<?php the_permalink(); ?>"
                rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
             <?php the_title(); ?></a></h2>
 
