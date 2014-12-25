@@ -1,36 +1,68 @@
 @import url('../bower_components/bootstrap/less/bootstrap.less');
 
 .site-header {
-  border: 1px solid lightgrey;
+//  border: 1px solid lightgrey;
 }
 .site-title {
+  margin-top: 30px;
+  margin-bottom: 0;
+  font-size: 60px;
+  font-weight: normal;
 }
 .site-description {
+  font-size: 20px;
+  color: #999;
 }
 
-.primary {
-  float: left;
-  width: 800px;
-  border: solid 1px darkgray;
+.meta {
+  margin-bottom: 15px;
 }
-.main-sidebar {
-  float: left;
+.post {
+  p, li {
+    font-size: 16px;
+    line-height: 1.7em;
+  }
+  p {
+    margin-bottom: 18px;
+  }
+
 }
+
 .widget {
-  border: solid darkgray 1px;
-  margin: 0 0 15px;
-  .panel;
-  .panel-default;
-
   .widget-title {
-    .panel-heading;
+    font-size: 16px;
   }
   ul {
-    .panel-body;
+    list-style: none;
+    padding-left: 20px;
+  }
+
+  &.widget_search {
+    .searchform {
+      div {
+        .screen-reader-text {
+          display: none;
+        }
+        input[type=text] {
+          .form-control;
+          vertical-align: middle;
+          width: 70%;
+          display: inline-block;
+        }
+        input[type=submit] {
+          .btn;
+          .btn-primary;
+        }
+      }
+    }
   }
 }
 
+
 footer {
-  clear: both;
-  border: 1px solid darkgray;
+  padding: 40px 0;
+  color: #999;
+  text-align: center;
+  background-color: #f9f9f9;
+  border-top: 1px solid #e5e5e5;
 }

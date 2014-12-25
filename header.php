@@ -5,14 +5,16 @@
 </head>
 
 <header class="site-header" role="banner">
-  <hgroup>
-    <h1 class="page-header site-title">
-      <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
-         title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
-         rel="home">
-        <?php bloginfo( 'name' ); ?>
-      </a>
-      <small><?php bloginfo( 'description' ); ?></small>
-    </h1>
-  </hgroup>
+  <div class="container">
+    <hgroup>
+      <h1 class="site-title">
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"
+           title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
+           rel="home">
+          <?php bloginfo( 'name' ); ?>
+        </a>
+      </h1>
+      <p class="site-description"><?php bloginfo( 'description' ); ?></p>
+    </hgroup>
+  </div>
 </header>
