@@ -11,13 +11,30 @@
 }
 .site-description {
   font-size: 20px;
-  color: #999;
 }
 
 .meta {
   margin-bottom: 15px;
 }
-.post {
+
+.navbar {
+  .menu {
+    ul {
+      .nav;
+      .navbar-nav;
+      .current_page_item {
+        background-color: @gray-lighter;
+      }
+      li {
+        a {
+          color: @gray-light;
+        }
+      }
+    }
+  }
+}
+
+article {
   p, li {
     font-size: 16px;
     line-height: 1.7em;
@@ -25,7 +42,9 @@
   p {
     margin-bottom: 18px;
   }
+  footer {
 
+  }
 }
 
 .widget {
@@ -59,8 +78,9 @@
 }
 
 
-footer {
+footer[role="contentinfo"] {
   padding: 40px 0;
+  margin-top: 50px;
   color: #999;
   text-align: center;
   background-color: #f9f9f9;
