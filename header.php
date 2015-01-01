@@ -22,12 +22,6 @@
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
           <a class="navbar-brand"
              href="<?php echo esc_url( home_url( '/' ) ); ?>"
              title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"
@@ -35,7 +29,6 @@
             <?php bloginfo( 'name' ); ?>
           </a>
         </div>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary', 'items_wrap' => '<ul><li id="item-id">Menu: </li>%3$s</ul>' ) ); ?>
       </div>
     </nav>
   </header>
