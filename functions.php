@@ -17,6 +17,11 @@ function setup() {
 }
 add_action( 'after_setup_theme', 'setup' );
 
+function new_excerpt_more() {
+  return ' <a href="'. get_permalink( get_the_ID() ) . '"><small><span class="glyphicon glyphicon-circle-arrow-right"></span> 더보기</small></a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
 if ( ! function_exists( 'entry_date' ) ) :
 function entry_date( $echo = true ) {
   $date = sprintf(

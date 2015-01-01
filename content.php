@@ -15,6 +15,7 @@
   <?php if ( is_search() | is_home() | is_category() | is_tag() ) : ?>
   <div class="entry-summary">
     <?php the_excerpt(); ?>
+    <?php new_excerpt_more(); ?>
   </div>
   <?php else : ?>
   <div class="entry-content">
