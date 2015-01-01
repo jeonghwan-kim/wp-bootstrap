@@ -57,3 +57,53 @@ function entry_meta() {
   }
 }
 endif;
+
+if ( ! function_exists( 'paging_nav' ) ) :
+  function paging_nav() {
+    global $wp_query;
+
+    // Don't print empty markup if there's only one page.
+    if ( $wp_query->max_num_pages < 2 )
+      return;
+    ?>
+    <nav class="row">
+      <div class="col-sm-6">
+        <?php if ( get_next_posts_link() ) : ?>
+          <?php next_posts_link( '<span class="glyphicon glyphicon-chevron-left"></span>이전글' ); ?>
+        <?php endif; ?>
+      </div>
+      <div class="col-sm-6 text-right">
+        <?php if ( get_previous_posts_link() ) : ?>
+          <?php previous_posts_link( '다음글<span class="glyphicon glyphicon-chevron-right"></span>' ); ?>
+        <?php endif; ?>
+      </div>
+
+  <?php
+  }
+endif;
+
+if ( ! function_exists( 'post_nav' ) ) :
+function post_nav() {
+  global $post;
+
+  // Don't print empty markup if there's nowhere to navigate.
+  $previous = ( is_attachment() ) ? get_post( $post->post_parent ) : get_adjacent_post( false, '', true );
+  $next     = get_adjacent_post( false, '', false );
+
+  if ( ! $next && ! $previous )
+    return;
+  ?>
+
+  <nav class="row">
+    <div class="col-sm-6">
+      <?php previous_post_link( '%link', _x( '<span class="glyphicon glyphicon-chevron-left"></span> 이전글: %title', 'Previous post link' ) ); ?>
+    </div>
+    <div class="col-sm-6 text-right">
+      <?php next_post_link( '%link', _x( '다음글: %title <span class="glyphicon glyphicon-chevron-right"></span>', 'Next post link' ) ); ?>
+    </div>
+  </nav>
+<?php
+}
+endif;
+
+?>

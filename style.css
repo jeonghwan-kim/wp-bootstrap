@@ -6310,6 +6310,7 @@ article p {
   margin-bottom: 18px;
 }
 article header .page-header {
+  margin-top: 0;
   margin-bottom: 10px;
 }
 article .entry-meta {
@@ -6324,6 +6325,9 @@ article .entry-meta .date .glyphicon,
 article .entry-meta .categories-links .glyphicon,
 article .entry-meta .tags-links .glyphicon {
   margin-right: 5px;
+}
+article .entry-summary {
+  margin-bottom: 40px;
 }
 article .entry-content h1 {
   font-size: 200%;
