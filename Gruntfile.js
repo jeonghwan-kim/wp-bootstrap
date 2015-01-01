@@ -57,16 +57,37 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          src: ['*', '!Gruntfile.js', '!bower.json', '!package.json'],
+          dot: true,
+          cwd: './',
           dest: 'dist/',
-          filter: 'isFile'
+          src: [
+            '*.php',
+            '*.css'
+          ]
         }]
       }
     },
 
     clean: {
       dist: ['dist']
+    },
+
+    rsync: {
+      options: {
+        args: ['-zvr'],
+        exclude: ['.git*', '*.scss', 'node_modules'],
+        recursive: true
+      },
+      prod: {
+        options: {
+          src: './dist/*',
+          dest: '/var/www/html/wp-content/themes/ej88ej-theme-02',
+          host: 'ubuntu@54.64.213.117',
+          delete: true
+        }
+      }
     }
+
   });
 
   grunt.registerTask('build', ['less', 'clean', 'copy']);

@@ -1,31 +1,25 @@
 @import url('../bower_components/bootstrap/less/bootstrap.less');
 
 .site-header {
-//  border: 1px solid lightgrey;
-}
-.site-title {
-  margin-top: 30px;
-  margin-bottom: 0;
-  font-size: 60px;
-  font-weight: normal;
-}
-.site-description {
-  font-size: 20px;
-}
-
-.meta {
-  margin-bottom: 15px;
-}
-
-nav {
-  ul {
-    .current_page_item,
-    .current-menu-item {
-      background-color: @gray-lighter;
-    }
-    li {
-      a {
-        color: @gray-light;
+  .site-title {
+    margin-top: 30px;
+    margin-bottom: 0;
+    font-size: 60px;
+    font-weight: normal;
+  }
+  .site-description {
+    font-size: 20px;
+  }
+  nav {
+    ul {
+      .current_page_item,
+      .current-menu-item {
+        background-color: @gray-lighter;
+      }
+      li {
+        a {
+          color: @gray-light;
+        }
       }
     }
   }
@@ -56,38 +50,46 @@ article {
       margin-right: 15px;
     }
   }
+  .entry-content {
+    h1 {
+      font-size: 200%;
+      color: @gray-light;
+    }
+  }
 }
 
-.widget {
-  .widget-title {
-    font-size: 16px;
-  }
-  ul {
-    list-style: none;
-    padding-left: 20px;
-  }
+.main-sidebar {
+  margin-top: 40px;
 
-  &.widget_search {
-    .searchform {
-      div {
-        .screen-reader-text {
-          display: none;
-        }
-        input[type=text] {
-          .form-control;
-          vertical-align: middle;
-          width: 70%;
-          display: inline-block;
-        }
-        input[type=submit] {
-          .btn;
-          .btn-primary;
+  .widget {
+    .widget-title {
+      font-size: 16px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 20px;
+    }
+    &.widget_search {
+      .searchform {
+        div {
+          .screen-reader-text {
+            display: none;
+          }
+          input[type=text] {
+            .form-control;
+            vertical-align: middle;
+            width: 70%;
+            display: inline-block;
+          }
+          input[type=submit] {
+            .btn;
+            .btn-primary;
+          }
         }
       }
     }
   }
 }
-
 
 footer[role="contentinfo"] {
   padding: 40px 0;

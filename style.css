@@ -6285,23 +6285,20 @@ button.close {
     display: none !important;
   }
 }
-.site-title {
+.site-header .site-title {
   margin-top: 30px;
   margin-bottom: 0;
   font-size: 60px;
   font-weight: normal;
 }
-.site-description {
+.site-header .site-description {
   font-size: 20px;
 }
-.meta {
-  margin-bottom: 15px;
-}
-nav ul .current_page_item,
-nav ul .current-menu-item {
+.site-header nav ul .current_page_item,
+.site-header nav ul .current-menu-item {
   background-color: #eeeeee;
 }
-nav ul li a {
+.site-header nav ul li a {
   color: #777777;
 }
 article p,
@@ -6328,17 +6325,24 @@ article .entry-meta .categories-links .glyphicon,
 article .entry-meta .tags-links .glyphicon {
   margin-right: 5px;
 }
-.widget .widget-title {
+article .entry-content h1 {
+  font-size: 200%;
+  color: #777777;
+}
+.main-sidebar {
+  margin-top: 40px;
+}
+.main-sidebar .widget .widget-title {
   font-size: 16px;
 }
-.widget ul {
+.main-sidebar .widget ul {
   list-style: none;
   padding-left: 20px;
 }
-.widget.widget_search .searchform div .screen-reader-text {
+.main-sidebar .widget.widget_search .searchform div .screen-reader-text {
   display: none;
 }
-.widget.widget_search .searchform div input[type=text] {
+.main-sidebar .widget.widget_search .searchform div input[type=text] {
   display: block;
   width: 100%;
   height: 34px;
@@ -6359,33 +6363,33 @@ article .entry-meta .tags-links .glyphicon {
   width: 70%;
   display: inline-block;
 }
-.widget.widget_search .searchform div input[type=text]:focus {
+.main-sidebar .widget.widget_search .searchform div input[type=text]:focus {
   border-color: #66afe9;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
-.widget.widget_search .searchform div input[type=text]::-moz-placeholder {
+.main-sidebar .widget.widget_search .searchform div input[type=text]::-moz-placeholder {
   color: #999999;
   opacity: 1;
 }
-.widget.widget_search .searchform div input[type=text]:-ms-input-placeholder {
+.main-sidebar .widget.widget_search .searchform div input[type=text]:-ms-input-placeholder {
   color: #999999;
 }
-.widget.widget_search .searchform div input[type=text]::-webkit-input-placeholder {
+.main-sidebar .widget.widget_search .searchform div input[type=text]::-webkit-input-placeholder {
   color: #999999;
 }
-.widget.widget_search .searchform div input[type=text][disabled],
-.widget.widget_search .searchform div input[type=text][readonly],
-fieldset[disabled] .widget.widget_search .searchform div input[type=text] {
+.main-sidebar .widget.widget_search .searchform div input[type=text][disabled],
+.main-sidebar .widget.widget_search .searchform div input[type=text][readonly],
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=text] {
   cursor: not-allowed;
   background-color: #eeeeee;
   opacity: 1;
 }
-textarea.widget.widget_search .searchform div input[type=text] {
+textarea.main-sidebar .widget.widget_search .searchform div input[type=text] {
   height: auto;
 }
-.widget.widget_search .searchform div input[type=submit] {
+.main-sidebar .widget.widget_search .searchform div input[type=submit] {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -6408,32 +6412,32 @@ textarea.widget.widget_search .searchform div input[type=text] {
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-.widget.widget_search .searchform div input[type=submit]:focus,
-.widget.widget_search .searchform div input[type=submit]:active:focus,
-.widget.widget_search .searchform div input[type=submit].active:focus,
-.widget.widget_search .searchform div input[type=submit].focus,
-.widget.widget_search .searchform div input[type=submit]:active.focus,
-.widget.widget_search .searchform div input[type=submit].active.focus {
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:active:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].active:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:active.focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].active.focus {
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-.widget.widget_search .searchform div input[type=submit]:hover,
-.widget.widget_search .searchform div input[type=submit]:focus,
-.widget.widget_search .searchform div input[type=submit].focus {
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:hover,
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].focus {
   color: #333333;
   text-decoration: none;
 }
-.widget.widget_search .searchform div input[type=submit]:active,
-.widget.widget_search .searchform div input[type=submit].active {
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].active {
   outline: 0;
   background-image: none;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-.widget.widget_search .searchform div input[type=submit].disabled,
-.widget.widget_search .searchform div input[type=submit][disabled],
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit] {
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled],
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit] {
   cursor: not-allowed;
   pointer-events: none;
   opacity: 0.65;
@@ -6441,43 +6445,43 @@ fieldset[disabled] .widget.widget_search .searchform div input[type=submit] {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-.widget.widget_search .searchform div input[type=submit]:hover,
-.widget.widget_search .searchform div input[type=submit]:focus,
-.widget.widget_search .searchform div input[type=submit].focus,
-.widget.widget_search .searchform div input[type=submit]:active,
-.widget.widget_search .searchform div input[type=submit].active,
-.open > .dropdown-toggle.widget.widget_search .searchform div input[type=submit] {
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:hover,
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].active,
+.open > .dropdown-toggle.main-sidebar .widget.widget_search .searchform div input[type=submit] {
   color: #ffffff;
   background-color: #286090;
   border-color: #204d74;
 }
-.widget.widget_search .searchform div input[type=submit]:active,
-.widget.widget_search .searchform div input[type=submit].active,
-.open > .dropdown-toggle.widget.widget_search .searchform div input[type=submit] {
+.main-sidebar .widget.widget_search .searchform div input[type=submit]:active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].active,
+.open > .dropdown-toggle.main-sidebar .widget.widget_search .searchform div input[type=submit] {
   background-image: none;
 }
-.widget.widget_search .searchform div input[type=submit].disabled,
-.widget.widget_search .searchform div input[type=submit][disabled],
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit],
-.widget.widget_search .searchform div input[type=submit].disabled:hover,
-.widget.widget_search .searchform div input[type=submit][disabled]:hover,
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit]:hover,
-.widget.widget_search .searchform div input[type=submit].disabled:focus,
-.widget.widget_search .searchform div input[type=submit][disabled]:focus,
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit]:focus,
-.widget.widget_search .searchform div input[type=submit].disabled.focus,
-.widget.widget_search .searchform div input[type=submit][disabled].focus,
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit].focus,
-.widget.widget_search .searchform div input[type=submit].disabled:active,
-.widget.widget_search .searchform div input[type=submit][disabled]:active,
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit]:active,
-.widget.widget_search .searchform div input[type=submit].disabled.active,
-.widget.widget_search .searchform div input[type=submit][disabled].active,
-fieldset[disabled] .widget.widget_search .searchform div input[type=submit].active {
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled],
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit],
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled:hover,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled]:hover,
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit]:hover,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled]:focus,
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit]:focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled.focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled].focus,
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit].focus,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled:active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled]:active,
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit]:active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit].disabled.active,
+.main-sidebar .widget.widget_search .searchform div input[type=submit][disabled].active,
+fieldset[disabled] .main-sidebar .widget.widget_search .searchform div input[type=submit].active {
   background-color: #337ab7;
   border-color: #2e6da4;
 }
-.widget.widget_search .searchform div input[type=submit] .badge {
+.main-sidebar .widget.widget_search .searchform div input[type=submit] .badge {
   color: #337ab7;
   background-color: #ffffff;
 }
