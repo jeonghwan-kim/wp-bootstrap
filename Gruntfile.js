@@ -62,7 +62,8 @@ module.exports = function (grunt) {
           dest: 'dist/',
           src: [
             '*.php',
-            '*.css'
+            '*.css',
+            'bower_components/**/*'
           ]
         }]
       }
