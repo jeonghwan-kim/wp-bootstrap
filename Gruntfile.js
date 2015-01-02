@@ -34,7 +34,8 @@ module.exports = function (grunt) {
     less: {
       default: {
         files: {
-          'style.css': 'styles/main.less'
+          'style.css': 'styles/main.less',
+          'editor-style.css': 'styles/editor-style.less'
         }
       }
     },

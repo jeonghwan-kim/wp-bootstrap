@@ -9,6 +9,8 @@ function widgets_init() {
       'before_title' => '<h3 class="widget-title">',
       'after_title' => '</h3>',
   ) );
+
+  add_editor_style();
 }
 add_action( 'widgets_init', 'widgets_init' );
 
