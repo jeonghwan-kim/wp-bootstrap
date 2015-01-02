@@ -20,11 +20,11 @@ function setup() {
 add_action( 'after_setup_theme', 'setup' );
 
 function wpBootstrap_scripts_styles() {
-  wp_register_script(
-      'bootstrap',
-      get_template_directory_uri() . '/bower_components/bootstrap/bootstrap.js',
-      array( 'jquery') );
+  wp_register_script( 'bootstrap', get_template_directory_uri() . '/bower_components/bootstrap/bootstrap.js', array( 'jquery') );
   wp_enqueue_script( 'bootstrap' );
+
+  wp_register_script( 'ga', get_template_directory_uri() . '/scripts/ga.js');
+  wp_enqueue_script( 'ga' );
 }
 add_action( 'wp_enqueue_scripts', 'wpBootstrap_scripts_styles' );
 
