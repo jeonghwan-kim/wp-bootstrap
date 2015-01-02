@@ -19,6 +19,15 @@ function setup() {
 }
 add_action( 'after_setup_theme', 'setup' );
 
+function wpBootstrap_scripts_styles() {
+  wp_register_script(
+      'bootstrap',
+      get_template_directory_uri() . '/bower_components/bootstrap/bootstrap.js',
+      array( 'jquery') );
+  wp_enqueue_script( 'bootstrap' );
+}
+add_action( 'wp_enqueue_scripts', 'wpBootstrap_scripts_styles' );
+
 function new_excerpt_more() {
   return ' <a href="'. get_permalink( get_the_ID() ) . '"><small><span class="glyphicon glyphicon-circle-arrow-right"></span> 더보기</small></a>';
 }
