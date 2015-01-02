@@ -83,7 +83,7 @@ module.exports = function (grunt) {
       prod: {
         options: {
           src: './dist/*',
-          dest: '/var/www/html/wp-content/themes/ej88ej-theme-02',
+          dest: '/var/www/html/wp-content/themes/wp-bootstrap',
           host: 'ubuntu@54.64.213.117',
           delete: true
         }

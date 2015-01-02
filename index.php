@@ -10,8 +10,8 @@
  * @link http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage ej88ej-theme-02
- * @since ej88ej-theme-02
+ * @subpackage wp-bootstrap
+ * @since wp-bootstrap
  */
 
 get_header(); ?>
