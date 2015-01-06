@@ -64,7 +64,8 @@ module.exports = function (grunt) {
           src: [
             '*.php',
             '*.css',
-            'bower_components/**/*'
+            'bower_components/**/*',
+            'scripts/**/*'
           ]
         }]
       }
@@ -76,7 +77,7 @@ module.exports = function (grunt) {
 
     rsync: {
       options: {
-        args: ['-zvr'],
+        args: ['-zvr', '--delete'],
         exclude: ['.git*', '*.scss', 'node_modules'],
         recursive: true
       },
