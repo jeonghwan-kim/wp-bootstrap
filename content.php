@@ -1,10 +1,8 @@
-<article <?php post_class(); ?>>
+<article class="home" <?php post_class(); ?>>
   <header>
     <h2 class="page-header">
       <?php if ( is_search() | is_home() | is_category() | is_tag() ) : ?>
         <a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a>
-      <?php else: ?>
-        <?php the_title(); ?>
       <?php endif; ?>
     </h2>
     <div class="entry-meta">
@@ -16,10 +14,6 @@
   <div class="entry-summary">
     <?php the_excerpt(); ?>
     <?php new_excerpt_more(); ?>
-  </div>
-  <?php else : ?>
-  <div class="entry-content">
-    <?php the_content(); ?>
   </div>
   <?php endif; ?>
 

@@ -36,7 +36,7 @@ add_filter( 'excerpt_more', 'new_excerpt_more' );
 if ( ! function_exists( 'entry_date' ) ) :
 function entry_date( $echo = true ) {
   $date = sprintf(
-      '<span class="date text-muted">' .
+      '<span class="date">' .
         '<span class="glyphicon glyphicon-calendar"></span>' .
         '<time class="entry-date" datetime="%1$s">%2$s</time>' .
       '</span>',
@@ -59,7 +59,7 @@ function entry_meta() {
   $categories_list = get_the_category_list(', ');
   if ( $categories_list ) {
     echo '<span class="categories-links">' .
-           '<span class="glyphicon glyphicon-folder-open text-primary"></span>' .
+           '<span class="glyphicon glyphicon-folder-open"></span>' .
            $categories_list .
          '</span>';
   }
@@ -67,7 +67,7 @@ function entry_meta() {
   $tag_list = get_the_tag_list('', ', ');
   if ( $tag_list ) {
     echo '<span class="tags-links">' .
-           '<span class="glyphicon glyphicon-tags text-primary"></span>' .
+           '<span class="glyphicon glyphicon-tags"></span>' .
            $tag_list .
          '</span>';
   }
