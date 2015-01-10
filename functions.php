@@ -4,10 +4,10 @@ function widgets_init() {
       'name' => __( 'Main Sidebar', 'ej88ej' ),
       'id' => 'main-sidebar',
       'description' => __( 'This is main sidebar', 'ej88ej'),
-      'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+      'before_widget' => '<aside id="%1$s" class="widget %2$s panel panel-primary">',
       'after_widget' => '</aside>',
-      'before_title' => '<h3 class="widget-title">',
-      'after_title' => '</h3>',
+      'before_title' => '<div class="widget-title panel-heading">',
+      'after_title' => '</div>'
   ) );
 
   add_editor_style();

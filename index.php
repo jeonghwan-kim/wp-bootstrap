@@ -19,15 +19,17 @@ get_header(); ?>
 <div class="container">
   <div class="row">
     <div class="col-md-9">
-    <?php if (have_posts()) : ?>
-      <?php while (have_posts()) : the_post(); ?>
-        <?php get_template_part( 'content', get_post_format() ); ?>
-      <?php endwhile; ?>
-      <?php paging_nav(); ?>
-    <?php else : ?>
-      <h2 class="text-muted">Nothing Found</h2>
-    <?php endif; ?>
+      <?php if (have_posts()) : ?>
+        <?php while (have_posts()) : the_post(); ?>
+          <?php get_template_part( 'content', get_post_format() ); ?>
+        <?php endwhile; ?>
+        <?php paging_nav(); ?>
+      <?php else : ?>
+        <h2 class="text-muted">Nothing Found</h2>
+      <?php endif; ?>
+    </div>
+    <div class="col-md-3">
+      <?php get_sidebar(); ?>
     </div>
 
-    <?php get_sidebar(); ?>
     <?php get_footer(); ?>
