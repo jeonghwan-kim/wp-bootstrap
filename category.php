@@ -1,9 +1,14 @@
-<?php
-get_header(); ?>
+<?php get_header(); ?>
+
 
 <div class="container">
   <div class="row">
-    <div class="col-lg-9">
+    <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+      <div class="col-md-9">
+    <?php else : ?>
+      <div class="col-md-12">
+    <?php endif; ?>
+
       <?php if (have_posts()) : ?>
         <header class="archive-header">
           <div class="panel panel-primary">
@@ -27,5 +32,10 @@ get_header(); ?>
       <?php endif; ?>
     </div>
 
-    <?php get_sidebar(); ?>
+    <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+      <div class="col-md-3">
+        <?php get_sidebar(); ?>
+      </div>
+    <?php endif; ?>
+
     <?php get_footer(); ?>

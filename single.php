@@ -14,15 +14,22 @@
 
     <div class="container">
       <div class="row">
+        <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
         <div class="col-md-9">
+        <?php else : ?>
+        <div class="col-md-12">
+        <?php endif; ?>
           <?php get_template_part( 'content-single', get_post_format() ); ?>
           <div class=""><?php post_nav(); ?></div>
         </div>
-        <div class="col-md-3">
-          <?php get_sidebar(); ?>
-        </div>
+
+        <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+          <div class="col-md-3">
+            <?php get_sidebar(); ?>
+          </div>
+        <?php endif; ?>
       </div>
-    </div>
+    </div> <!-- .container -->
   <?php endwhile; ?>
 
 <?php endif; ?>
