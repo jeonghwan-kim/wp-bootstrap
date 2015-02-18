@@ -94,5 +94,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', ['less', 'clean', 'copy']);
+  grunt.registerTask('deploy', ['build', 'rsync']);
   grunt.registerTask('default', ['php', 'concurrent']);
 };
