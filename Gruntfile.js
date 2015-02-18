@@ -85,7 +85,7 @@ module.exports = function (grunt) {
         options: {
           src: './dist/*',
           dest: '/var/www/wp-content/themes/wp-bootstrap',
-          host: 'ubuntu@whatilearn.com',
+          host: 'user@remote-host.com',
           delete: true
         }
       }
